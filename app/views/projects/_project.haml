@@ -1,0 +1,13 @@
+.wrap
+  %a{:href => "http://#{@project.link_to_site}"} 
+    %img.thumb{:src => @project.image.thumb.url} 
+  %h3.project_title= @project.title    
+  .short_desc= @project.short_desc  
+  %a.link_to_site{:href => "http://#{@project.link_to_site}"} Visit Site    
+- progress = 1.42 * @project.progress
+- progress = progress.round  
+- progress_remaining = 142 - progress  
+- progress_remaining2 = progress_remaining 
+.completed{:style => "height:#{progress}px; margin-top:#{progress_remaining}px;"}  
+.incomplete  
+.progress_label{:style => "margin-top:#{progress_remaining2}px;"}= "#{@project.progress}%"   

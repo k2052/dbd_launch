@@ -1,0 +1,103 @@
+!!! 5  
+%html{:lang => "en" }
+  %head 
+    %meta{:charset => "UTF-8"}     
+    %title Design BreakDown Open Launch | I Break Stuff 
+    %link{:href => "favicon.ico", :type => "image/x-icon", :rel => "shortcut icon"}  
+    = css_assets 'index'
+    = js_assets 'index'
+    :plain 
+      <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1255237-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>      
+  %body.home    
+    %section#top_header_wrap   
+      %header.wrapper 
+        %a{:href => "http://www.club.designbreakdown.com", :id => "logo", :class => "hideTxt"}
+        %nav  
+          %noscript Javascript required for site to function properly. Please enable it.
+    %section#main
+      %header.wrapper
+        %h1.page_title An Open Beta/Launch of an Open Source Template Club.  
+        %h2.sub_title no hype, no teasers, no little itty bitty thumbnails, just real releases while they happen.     
+        .intro
+          %p
+            One developer/designer is about to launch a template club, extension club and a series of cms services for Joomla!. 
+            He's going to do it all out in the open. 
+            All the trials, tribulations and frustrations will be; catalogued, shared, blogged, tweeted and archived. 
+            Every line of code will be open sourced, documented and hopefully found useful. 
+            You'll know where every dollar is spent and every direction taken.     
+          %p   
+            You'll wonder if I'm crazy and not just because the previous 3rd person paragraph, but because of how much will be 
+            done in the open.
+          %p
+            There will be chaos, but I thrive on chaos.
+            There will be stuff broken, but thats how things are fixed. 
+            There will be headaches, frustrations, and the journey will be harder than I had planned for, but in the end there shall be awesomeness and I will say ‘It was worth it’ .  
+          %p
+            I’m breaking code, breaking habits and breaking expectations. Together lets break some stuff.   
+    %section#phases 
+      #location 
+        #marker 
+        #bar 
+      %nav
+        %ul
+          %li.phase1 
+            %a{:href => "#logo"} <span>Phase 1</span>
+          %li.phase2      
+            %a{:href => "#logo"} <span>Phase 2</span>   
+          %li.phase3      
+            %a{:href => "#logo"} <span>Phase 3</span>
+          %li.phase4      
+            %a{:href => "#logo"} <span>Phase 4</span>    
+          %li.phase5      
+            %a{:href => "#logo"} <span>Phase 5</span>
+      .clear      
+      %ul#phases_list
+        - @phases.each_with_index do |@phase, index| 
+          - @projects = @phase.projects   
+          %li.phase_wrap{:id => "phase#{index + 1}", :class => @phase.css_class}
+            .moon 
+            .phase
+              .meta
+                %h1.phase_title= "Phase #{index + 1}: #{@phase.title}"  
+                .phase_desc= @phase.desc      
+                .date_wrap
+                  .start_date.date  
+                    %span Start Date:
+                    = @phase.start_date       
+                  .end_date.date  
+                    %span End Date:
+                    = @phase.end_date      
+              - if !@projects.empty?     
+                .projects_scroll_wrap 
+                  %a{:class => "prev browse left"}  
+                    %span.arrow_hover
+                  .projects_scroll
+                    %ul.projects_for_phase
+                      - @projects.each_with_index do |@project, index| 
+                        - if index == 0 
+                          <li class="group">   
+                          <ul class="projects">
+                        - elsif index % 3 == 0   
+                          </ul></li>     
+                        %li.project= partial "projects/project"  
+                  %a{:class => "next browse right"}       
+                    %span.arrow_hover      
+              - else  
+                %p.nothing No sites will be launched during this phase. It will be all about the bug fixes and launch prep.  
+      %a#me_twitter{:href => "http://twitter.com/TheLastBookworm", :class => "fade hideTxt"} 
+        Follow The Lead Developer On Twitter  
+      #me_twitter_bg_fade  
+= partial "partials/destroyed"
+= partial "partials/footer"                             

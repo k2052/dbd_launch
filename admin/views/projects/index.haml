@@ -1,0 +1,31 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:projects, :index)
+      %li=link_to pat(:new), url(:projects, :new)
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:project)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:project, :title)
+          %th=mat(:project, :created_at)    
+          %th=mat(:project, :phase_id)
+          %th=mat(:project, :progress)
+          %th.last="&nbsp;"
+        -@projects.each do |project|
+          %tr
+            %td.first=project.title
+            %td=project.created_at 
+            %td=project.phase_id
+            %td=project.progress
+            %td.last
+              =button_to pat(:edit), url(:projects, :edit, :id => project.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:projects, :destroy, :id => project.id), :method => :delete, :class => :button_to
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")
