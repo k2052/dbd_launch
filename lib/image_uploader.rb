@@ -39,7 +39,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     config.s3_cnamed = false
     config.s3_access_key_id     = ENV['S3_ACCESS_KEY']
     config.s3_secret_access_key = ENV['S3_SECRET_ACCESS_KEY']
-    config.s3_bucket = 'media-launch.designbreakdown.com' 
+    config.s3_bucket = ENV['S3_BUCKET']
   end
   
   ## Manually set root

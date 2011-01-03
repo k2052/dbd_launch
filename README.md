@@ -28,7 +28,12 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
   
     # S3 is used for media uploads
     ENV['S3_ACCESS_KEY']            = 'XXX'
-    ENV['S3_SECRET_ACCESS_KEY']     = 'XXX'    
+    ENV['S3_SECRET_ACCESS_KEY']     = 'XXX'   
+      
+    # S3 Bucket where media is stored   
+    # Images/videos etc will be stored in a subfolder of the bucket.
+    # e.g bucketName/images bucketName/videos 
+    ENV['S3_BUCKET']                = 'Bucket To Store Media In'
   
     # Used as an extra salt to encrypt passwords. Refer to app/model/account.rb
     ENV['PASS_SALT_SECRET']         = "XXX"  
