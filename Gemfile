@@ -1,11 +1,10 @@
 source :rubygems
 
-# Project requirements
+# Project requirements 
+gem 'sinatra', '1.1.0'
 gem 'rake'
 gem 'rack-flash'
 gem 'thin' # or mongrel  
-gem 'vlad'
-gem 'vlad-git'
 
 # Component requirements   
 gem 'magic' 
@@ -31,4 +30,4 @@ gem 'shoulda', :group => "test"
 gem 'rack-test', :require => "rack/test", :group => "test"
 
 # Padrino
-gem 'padrino', "0.9.18"
+gem 'padrino', "0.9.19"
