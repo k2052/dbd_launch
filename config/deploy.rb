@@ -70,47 +70,7 @@ namespace :vlad do
   remote_task :restart_nginx do    
     run "sudo /etc/init.d/nginx stop"
     run "sudo /etc/init.d/nginx start"
-  end  
-       
-  remote_task :start_thin do 
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo bundle exec thin start -s #{num_thin_servers} -p #{thin_port} -e production -d"   
-  end  
-    
-  remote_task :stop_thin do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo bundle exec thin stop -s #{num_thin_servers} -p #{thin_port} -e production -d"
-  end  
-     
-  remote_task :create_god_navvy do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo god -c navvy.god"
-  end 
-   
-  remote_task :stop_god_navvy do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo god stop navvy"
-  end  
-  
-  remote_task :write_thin_config do 
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo bundle exec thin config -C /etc/thin/#{app_name}.yml -c /home/#{deploy_user}/#{app_domain_name}/#{app_name} --servers 3 -e production"
-  end  
-    
-  remote_task :start_god_thin do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo god -c thin.god"
-  end  
-  
-  remote_task :create_god_nginx do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo god -c nginx.god"  
-  end     
-   
-  remote_task :stop_god_nginx do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo god stop nginx"  
-  end  
-  
-  remote_task :start_god_nginx do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo god start nginx"  
-  end  
-  
-  remote_task :restart_god_nginx do    
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo god restart nginx"  
-  end  
+  end   
   
   task :create_mongodb_dump do
     %x{mongodump -d #{db_name}}
@@ -135,7 +95,7 @@ task "vlad:predeploy" => %w[
   vlad:server_prep
 ]
 
-task "vlad:deploy" => %w[  
+task "vlad:deployit" => %w[  
   vlad:setup_git
   vlad:setup_git_local
   vlad:push_git      
@@ -143,44 +103,10 @@ task "vlad:deploy" => %w[
   vlad:parse_nginx_template
   vlad:setup_nginx_vhost
   vlad:restart_nginx
-  vlad:write_thin_config  
-  vlad:start_thin    
-  vlad:create_god_navvy
-  vlad:create_god_nginx  
   vlad:remote_update_crontab
 ] 
 
-task "vlad:go_nginx" => %w[   
-  vlad:write_thin_config  
-  vlad:create_god_thin  
-  vlad:create_god_nginx
-]     
-
-task "vlad:gods" => %w[   
-  vlad:start_thin
-  vlad:create_god_nginx
-] 
-
-task "vlad:startup" => %w[   
-  vlad:write_thin_config  
-  vlad:greate_god_thin  
-  vlad:create_god_nginx
-] 
-
-task "vlad:update" => %w[  
+task "vlad:updateit" => %w[  
   vlad:push_git    
-  vlad:stop_thin
-  vlad:start_thin 
-  vlad:restart_god_nginx
-] 
-
-task "vlad:redeploy" => %w[  
-  vlad:parse_nginx_template
-  vlad:setup_nginx_vhost
   vlad:restart_nginx
-  vlad:write_thin_config  
-  vlad:start_thin    
-  vlad:create_god_navvy
-  vlad:create_god_nginx  
-  vlad:remote_update_crontab
-]
+] 
