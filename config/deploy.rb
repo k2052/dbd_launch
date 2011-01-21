@@ -89,7 +89,7 @@ namespace :vlad do
   end  
   
   remote_task :write_thin_config do 
-    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name}  && sudo bundle exec thin config -C /etc/thin/#{app_name}.yml -c /home/#{deploy_user}/#{app_domain_name}/#{app_name} --servers 3 -e production"
+    run "cd /home/#{deploy_user}/#{app_domain_name}/#{app_name} && sudo bundle exec thin config -C /etc/thin/#{app_name}.yml -c /home/#{deploy_user}/#{app_domain_name}/#{app_name} --servers 3 -e production"
   end  
     
   remote_task :start_god_thin do    
