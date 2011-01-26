@@ -99,7 +99,6 @@ task "vlad:deployit" => %w[
   vlad:setup_git
   vlad:setup_git_local
   vlad:push_git      
-  vlad:bundle_install
   vlad:parse_nginx_template
   vlad:setup_nginx_vhost
   vlad:restart_nginx

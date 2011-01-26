@@ -2,8 +2,9 @@
   %a{:href => "http://#{@project.link_to_site}"} 
     %img.thumb{:src => @project.image.thumb.url} 
   %h3.project_title= @project.title    
-  .short_desc= @project.short_desc  
-  %a.link_to_site{:href => "http://#{@project.link_to_site}"} Visit Site    
+  .short_desc= @project.short_desc       
+  - if @project.progress == 100
+    %a.link_to_site{:href => "http://#{@project.link_to_site}"} Visit Site    
 - progress = 1.42 * @project.progress
 - progress = progress.round  
 - progress_remaining = 142 - progress  

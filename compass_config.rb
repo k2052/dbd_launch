@@ -1,9 +1,9 @@
 require 'lemonade' 
 sass_dir = "app/stylesheets"
 project_type = :stand_alone
-http_path = "/"
+images_dir = "public/images"    
+http_images_path = "#{http_path}/images"
 css_dir = "public/css" 
-images_dir = "public/images" 
 output_style = :compressed     
 relative_assets  = false     
 asset_host do |asset|

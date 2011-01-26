@@ -1,78 +1,1335 @@
-/*
-Errno::ENOENT: No such file or directory - /Users/kenerickson/rubyprojects/dbd_launch/images/header/logo.png
+/* line 6, ../../app/stylesheets/partials/reset.scss */
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas,
+caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset,
+figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup,
+html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+object, ol, p, pre, q, samp, section, small, span, strong, sub, summary,
+sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+}
 
-Backtrace:
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/compass-0.10.6/lib/compass/sass_extensions/functions/image_size.rb:41:in `initialize'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/compass-0.10.6/lib/compass/sass_extensions/functions/image_size.rb:41:in `open'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/compass-0.10.6/lib/compass/sass_extensions/functions/image_size.rb:41:in `get_size_for_png'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/compass-0.10.6/lib/compass/sass_extensions/functions/image_size.rb:34:in `send'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/compass-0.10.6/lib/compass/sass_extensions/functions/image_size.rb:34:in `size'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/compass-0.10.6/lib/compass/sass_extensions/functions/image_size.rb:12:in `image_height'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/lemonade-0.3.4/lib/lemonade/sass_extensions/functions/lemonade.rb:22:in `sprite_image'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/script/funcall.rb:69:in `send'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/script/funcall.rb:69:in `_perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/script/node.rb:61:in `perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/prop_node.rb:132:in `perform!'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/rule_node.rb:191:in `perform!'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:59:in `perform!'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:37:in `perform'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:29:in `render'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin.rb:223:in `update_stylesheet'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin.rb:88:in `update_stylesheets'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `each'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `update_stylesheets'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `each'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `update_stylesheets'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin.rb:50:in `check_for_updates'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/haml-3.0.25/lib/sass/plugin/rack.rb:40:in `call'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/sinatra-1.1.2/lib/sinatra/base.rb:1167:in `call'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/sinatra-1.1.2/lib/sinatra/base.rb:1193:in `synchronize'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/sinatra-1.1.2/lib/sinatra/base.rb:1167:in `call'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/padrino-core-0.9.18/lib/padrino-core/router.rb:71:in `call'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/padrino-core-0.9.18/lib/padrino-core/router.rb:64:in `each'
-/Users/kenerickson/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/gems/1.8/gems/padrino-core-0.9.18/lib/padrino-core/router.rb:64:in `call'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/rack/request_handler.rb:96:in `process_request'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_request_handler.rb:513:in `accept_and_process_next_request'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_request_handler.rb:274:in `main_loop'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/rack/application_spawner.rb:205:in `start_request_handler'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/rack/application_spawner.rb:170:in `send'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/rack/application_spawner.rb:170:in `handle_spawn_application'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/utils.rb:479:in `safe_fork'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/rack/application_spawner.rb:165:in `handle_spawn_application'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server.rb:180:in `start'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/rack/application_spawner.rb:128:in `start'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rack_application'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/spawn_manager.rb:246:in `spawn_rack_application'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server_collection.rb:82:in `synchronize'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
-/Users/kenerickson/.rvm/gems/ruby-1.8.7-p299/gems/passenger-3.0.2/helper-scripts/passenger-spawn-server:99
-*/
-body:before {
+/* line 8, ../../app/stylesheets/partials/reset.scss */
+article, aside, canvas, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../../app/stylesheets/partials/reset.scss */
+a, ins, del {
+  text-decoration: none;
+}
+
+/* line 10, ../../app/stylesheets/partials/reset.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 11, ../../app/stylesheets/partials/reset.scss */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* line 12, ../../app/stylesheets/partials/reset.scss */
+caption, th {
+  text-align: left;
+}
+
+/* line 13, ../../app/stylesheets/partials/reset.scss */
+q:after, q:before {
+  content: "";
+}
+
+/* line 1, ../../app/stylesheets/partials/base.scss */
+body {
+  font: 13px/1.231 sans-serif;
+  *font-size: small;
+}
+
+/* line 2, ../../app/stylesheets/partials/base.scss */
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+/* line 6, ../../app/stylesheets/partials/base.scss */
+select,
+input,
+textarea,
+button {
+  font: 99% sans-serif;
+}
+
+/* line 10, ../../app/stylesheets/partials/base.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 13, ../../app/stylesheets/partials/base.scss */
+body, select, input, textarea {
+  color: #444;
+}
+
+/* line 14, ../../app/stylesheets/partials/base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* line 16, ../../app/stylesheets/partials/base.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+}
+
+/* line 19, ../../app/stylesheets/partials/base.scss */
+a:hover,
+a:active {
+  outline: none;
+}
+
+/* line 22, ../../app/stylesheets/partials/base.scss */
+a,
+a:active,
+a:visited {
+  color: #607890;
+}
+
+/* line 23, ../../app/stylesheets/partials/base.scss */
+a:hover {
+  color: #036;
+}
+
+/* line 25, ../../app/stylesheets/partials/base.scss */
+ul {
+  margin-left: 0px;
+}
+
+/* line 26, ../../app/stylesheets/partials/base.scss */
+ol {
+  margin-left: 0px;
+  list-style-type: decimal;
+}
+
+/* line 28, ../../app/stylesheets/partials/base.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 29, ../../app/stylesheets/partials/base.scss */
+strong, th {
+  font-weight: bold;
+}
+
+/* line 30, ../../app/stylesheets/partials/base.scss */
+td, td img {
+  vertical-align: top;
+}
+
+/* line 31, ../../app/stylesheets/partials/base.scss */
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+/* line 32, ../../app/stylesheets/partials/base.scss */
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+/* line 34, ../../app/stylesheets/partials/base.scss */
+pre {
+  padding: 15px;
   white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - /Users/kenerickson/rubyprojects/dbd_launch/images/header/logo.png"; }
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+/* line 42, ../../app/stylesheets/partials/base.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 43, ../../app/stylesheets/partials/base.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 47, ../../app/stylesheets/partials/base.scss */
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+/* line 48, ../../app/stylesheets/partials/base.scss */
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 49, ../../app/stylesheets/partials/base.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* line 51, ../../app/stylesheets/partials/base.scss */
+::-moz-selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 52, ../../app/stylesheets/partials/base.scss */
+::selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 54, ../../app/stylesheets/partials/base.scss */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99;
+}
+
+/* line 55, ../../app/stylesheets/partials/base.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 56, ../../app/stylesheets/partials/base.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 58, ../../app/stylesheets/partials/base.scss */
+blockquote {
+  padding: 8px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* line 64, ../../app/stylesheets/partials/base.scss */
+blockquote:before {
+  content: ' " ';
+  font-size: 24px;
+  font-family: Museo, "Hevletica Neua", Helvetica,sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+/* for image replacement */
+/* line 74, ../../app/stylesheets/partials/base.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* line 83, ../../app/stylesheets/partials/base.scss */
+.strike {
+  text-decoration: line-through;
+}
+
+/* line 85, ../../app/stylesheets/partials/base.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 86, ../../app/stylesheets/partials/base.scss */
+.visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 89, ../../app/stylesheets/partials/base.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* >> The Magnificent CLEARFIX << j.mp/phayesclearfix */
+/* line 92, ../../app/stylesheets/partials/base.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 93, ../../app/stylesheets/partials/base.scss */
+.clearfix {
+  zoom: 1;
+}
+
+@media print {
+  /* line 96, ../../app/stylesheets/partials/base.scss */
+  * {
+    background: transparent !important;
+    color: #444 !important;
+    text-shadow: none !important;
+  }
+
+  /* line 98, ../../app/stylesheets/partials/base.scss */
+  a,
+  a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 99, ../../app/stylesheets/partials/base.scss */
+  a:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 100, ../../app/stylesheets/partials/base.scss */
+  abbr:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 101, ../../app/stylesheets/partials/base.scss */
+  .ir a:after {
+    content: "";
+  }
+
+  /* Don't show links for images */
+  /* line 103, ../../app/stylesheets/partials/base.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 104, ../../app/stylesheets/partials/base.scss */
+  img {
+    page-break-inside: avoid;
+  }
+}
+
+/* line 107, ../../app/stylesheets/partials/base.scss */
+cufon canvas {
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* line 108, ../../app/stylesheets/partials/base.scss */
+cufon canvas::-moz-selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 110, ../../app/stylesheets/partials/base.scss */
+.hideTxt {
+  text-indent: -9999px;
+}
+
+/* line 112, ../../app/stylesheets/partials/base.scss */
+a.hideTxt,
+span.hideTxt {
+  display: block;
+}
+
+/* line 113, ../../app/stylesheets/partials/base.scss */
+.clear {
+  clear: both;
+}
+
+/* line 114, ../../app/stylesheets/partials/base.scss */
+.hide {
+  display: none;
+}
+
+/* line 115, ../../app/stylesheets/partials/base.scss */
+.wrapper {
+  width: 990px;
+  margin: 0px auto;
+}
+
+/* line 117, ../../app/stylesheets/partials/base.scss */
+body {
+  font-family: "Helvetica Neu",Helvetica,Arial,sans-serif;
+}
+
+/* line 119, ../../app/stylesheets/partials/base.scss */
+p {
+  font-family: "Helvetica Neu", Helvetica, Arial, sans-serif;
+  color: #3c3c3c;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 126, ../../app/stylesheets/partials/base.scss */
+a {
+  color: #7886AF;
+}
+/* line 127, ../../app/stylesheets/partials/base.scss */
+a :hover, a :active, a :focus {
+  outline: none;
+  border: none;
+  -moz-outline-style: none;
+}
+
+/* line 130, ../../app/stylesheets/partials/base.scss */
+:-moz-any-link:focus {
+  outline: none;
+}
+
+/* line 132, ../../app/stylesheets/partials/base.scss */
+h1, h2, h3 {
+  font-family: Avenir,"Helvetica Neu",Helvetica,Arial,sans-serif;
+}
+
+/* line 134, ../../app/stylesheets/partials/base.scss */
+h1 {
+  font-size: 36px;
+  line-height: 52px;
+  color: #333;
+  font-weight: normal;
+}
+
+/* flash-messages */
+/* line 142, ../../app/stylesheets/partials/base.scss */
+.flash {
+  margin: 0 auto;
+  width: 622px;
+}
+
+/* line 143, ../../app/stylesheets/partials/base.scss */
+.flash .message {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0 auto 15px -4px;
+  font-size: 18px;
+  padding: 5px 0 0;
+}
+
+/* line 144, ../../app/stylesheets/partials/base.scss */
+.flash .message p {
+  margin: 8px;
+}
+
+/* line 145, ../../app/stylesheets/partials/base.scss */
+.flash .error {
+  border: 1px solid #fbb;
+  background-color: #fdd;
+}
+
+/* line 146, ../../app/stylesheets/partials/base.scss */
+.flash .warning {
+  border: 1px solid #fffaaa;
+  background-color: #ffffcc;
+}
+
+/* line 147, ../../app/stylesheets/partials/base.scss */
+.flash .notice {
+  border: 1px solid #1FDF00;
+  background-color: #BBFFB6;
+}
+
+/* line 149, ../../app/stylesheets/partials/base.scss */
+html {
+  background: url('../images/body.png?1289258270') repeat;
+}
+
+/* line 150, ../../app/stylesheets/partials/base.scss */
+body {
+  background: url('../images/header-shade.png?1289268493') no-repeat scroll left top;
+}
+
+/* line 1, ../../app/stylesheets/partials/_forms.scss */
+.formError {
+  position: absolute;
+  width: auto;
+  z-index: 20000;
+}
+
+/* line 2, ../../app/stylesheets/partials/_forms.scss */
+.formErrorContent {
+  font-size: 12px;
+  color: #111;
+  background: red;
+  background: rgba(255, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  list-style: none;
+  line-height: 16px;
+}
+
+/* line 3, ../../app/stylesheets/partials/_forms.scss */
+.formErrorArrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid red;
+  border-top: 10px solid rgba(255, 0, 0, 0.6);
+  border-bottom: 0;
+  margin-left: 10px;
+}
+
+/* line 4, ../../app/stylesheets/partials/_forms.scss */
+.message_messageformError {
+  margin-top: 46px 0px 0px -375px !important;
+}
+
+/* line 6, ../../app/stylesheets/partials/_forms.scss */
+.message_messageformError .formErrorContent {
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+}
+
+/* line 7, ../../app/stylesheets/partials/_forms.scss */
+.ajaxSubmit {
+  font-size: 24px;
+  color: #808182;
+  font-family: "Helvetica Neu",Helvetica,Arial;
+  font-size: 42px;
+  font-weight: bold;
+  float: left;
+}
+
+/* line 5, ../../app/stylesheets/index.scss */
+#logo {
+  background: url('../images/header.png?1296005899');
+  width: 113px;
+  height: 52px;
+  position: absolute;
+  top: 310px;
+  right: 16px;
+}
+
+/* line 14, ../../app/stylesheets/index.scss */
+#main {
+  height: 379px;
+}
+
+/* line 17, ../../app/stylesheets/index.scss */
+#main header {
+  padding-top: 12px;
+}
+/* line 19, ../../app/stylesheets/index.scss */
+#main header p {
+  width: 900px;
+}
+
+/* line 22, ../../app/stylesheets/index.scss */
+.sub_title {
+  text-align: center;
+  font-size: 14px;
+  color: #7b7a7a;
+  font-weight: normal;
+  font-family: "Helvetica Neu",Helvetica,Avenir, Arial,sans-serif;
+  margin: 3px 0 26px 0;
+}
+
+/* line 31, ../../app/stylesheets/index.scss */
+p {
+  margin-bottom: 12px;
+}
+
+/* line 32, ../../app/stylesheets/index.scss */
+#phases {
+  background: #100808;
+  float: left;
+  width: 100%;
+}
+
+/* line 33, ../../app/stylesheets/index.scss */
+#location {
+  position: absolute;
+}
+
+/* line 35, ../../app/stylesheets/index.scss */
+#marker {
+  background: url('../images/phase.png?1296005896') no-repeat;
+  height: 51px;
+  margin: -40px 0 0 525px;
+  position: relative;
+  width: 94px;
+  z-index: 100;
+}
+
+/* line 44, ../../app/stylesheets/index.scss */
+#bar {
+  background: url('../images/phase_bars/phase1_bar.png?1289268757') repeat-x;
+  float: left;
+  height: 3px;
+  margin-top: -14px;
+  width: 549px;
+}
+
+/* line 52, ../../app/stylesheets/index.scss */
+#bar.phase1 {
+  background: url('../images/phase_bars/phase1_bar.png?1289268757') repeat-x;
+}
+
+/* line 53, ../../app/stylesheets/index.scss */
+#bar.phase2 {
+  background: url('../images/phase_bars/phase2_bar.png?1289268067') repeat-x;
+}
+
+/* line 54, ../../app/stylesheets/index.scss */
+#bar.phase3 {
+  background: url('../images/phase_bars/phase3_bar.png?1289268612') repeat-x;
+}
+
+/* line 55, ../../app/stylesheets/index.scss */
+#bar.phase4 {
+  background: url('../images/phase_bars/phase4_bar.png?1289268685') repeat-x;
+}
+
+/* line 56, ../../app/stylesheets/index.scss */
+#bar.phase5 {
+  background: url('../images/phase_bars/phase5_bar.png?1289268733') repeat-x;
+}
+
+/* line 59, ../../app/stylesheets/index.scss */
+#phases {
+  height: 400px;
+}
+/* line 62, ../../app/stylesheets/index.scss */
+#phases a {
+  color: #CDC5BF;
+  text-decoration: underline;
+}
+/* line 63, ../../app/stylesheets/index.scss */
+#phases a:hover {
+  text-decoration: none;
+  color: #fefefe;
+}
+/* line 66, ../../app/stylesheets/index.scss */
+#phases nav {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+/* line 71, ../../app/stylesheets/index.scss */
+#phases nav ul {
+  margin: -3px auto 0 550px;
+}
+/* line 72, ../../app/stylesheets/index.scss */
+#phases nav li {
+  border-top: 3px solid #7ecc70;
+  float: left;
+  margin-right: 50px;
+  padding: 6px 4px 0 4px;
+}
+/* line 73, ../../app/stylesheets/index.scss */
+#phases nav li.phase2 {
+  border-top: 3px solid #fcce0e;
+}
+/* line 74, ../../app/stylesheets/index.scss */
+#phases nav li.phase3 {
+  border-top: 3px solid #f76d19;
+}
+/* line 75, ../../app/stylesheets/index.scss */
+#phases nav li.phase4 {
+  border-top: 3px solid #fe9288;
+}
+/* line 76, ../../app/stylesheets/index.scss */
+#phases nav li.phase5 {
+  border-top: 3px solid #5db4ba;
+  margin-right: 0px;
+}
+/* line 77, ../../app/stylesheets/index.scss */
+#phases nav li a {
+  font-size: 11px;
+  color: #faf9fa;
+  text-decoration: none;
+}
+/* line 79, ../../app/stylesheets/index.scss */
+#phases p {
+  color: #CDC5BF;
+}
+
+/* line 82, ../../app/stylesheets/index.scss */
+.moon {
+  position: absolute;
+  z-index: 100;
+  width: 47px;
+  height: 67px;
+  background: url('../images/moon.png?1296005895') no-repeat;
+  margin-top: -43px;
+}
+
+/* line 91, ../../app/stylesheets/index.scss */
+#phase2 .moon {
+  background: url('../images/moon.png?1296005895') 0 -67px no-repeat;
+}
+
+/* line 92, ../../app/stylesheets/index.scss */
+#phase3 .moon {
+  background: url('../images/moon.png?1296005895') 0 -134px no-repeat;
+}
+
+/* line 93, ../../app/stylesheets/index.scss */
+#phase4 .moon {
+  background: url('../images/moon.png?1296005895') 0 -201px no-repeat;
+}
+
+/* line 94, ../../app/stylesheets/index.scss */
+#phase5 .moon {
+  background: url('../images/moon.png?1296005895') 0 -268px no-repeat;
+}
+
+/* line 95, ../../app/stylesheets/index.scss */
+.phase_wrap {
+  display: none;
+  position: absolute;
+}
+
+/* line 96, ../../app/stylesheets/index.scss */
+.phase_wrap.active {
+  display: block;
+}
+
+/* line 98, ../../app/stylesheets/index.scss */
+.phase_title {
+  font-weight: bold;
+  color: #efe5d0;
+  font-size: 25px;
+  line-height: 34px;
+}
+
+/* line 106, ../../app/stylesheets/index.scss */
+.phase {
+  margin: 18px 0 0 60px;
+  float: left;
+  color: #cdc5bf;
+}
+/* line 111, ../../app/stylesheets/index.scss */
+.phase .meta {
+  float: left;
+  width: 225px;
+}
+/* line 112, ../../app/stylesheets/index.scss */
+.phase .date_wrap {
+  margin-top: 12px;
+}
+/* line 115, ../../app/stylesheets/index.scss */
+.phase .date {
+  float: left;
+  font-size: 13px;
+  margin: 0 0 5px;
+}
+/* line 120, ../../app/stylesheets/index.scss */
+.phase .date span {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 3px;
+}
+/* line 127, ../../app/stylesheets/index.scss */
+.phase .end_date span {
+  margin-right: 8px;
+}
+/* line 128, ../../app/stylesheets/index.scss */
+.phase p, .phase .phase_desc {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* line 132, ../../app/stylesheets/index.scss */
+.projects_scroll_wrap,
+.projects_scroll {
+  height: 280px;
+  float: left;
+  width: 900px;
+}
+
+/* line 134, ../../app/stylesheets/index.scss */
+.projects_scroll_wrap,
+.nothing {
+  margin: 35px 0 0 18px;
+  width: 960px;
+}
+
+/* line 135, ../../app/stylesheets/index.scss */
+.projects_scroll {
+  overflow: hidden;
+  position: relative;
+  z-index: 90;
+  margin-left: 18px;
+}
+
+/* line 136, ../../app/stylesheets/index.scss */
+.projects_for_phase {
+  clear: both;
+  position: absolute;
+  width: 20000em;
+}
+
+/* line 137, ../../app/stylesheets/index.scss */
+.projects_for_phase li {
+  float: left;
+}
+
+/* line 138, ../../app/stylesheets/index.scss */
+.cloned {
+  display: none;
+}
+
+/* line 139, ../../app/stylesheets/index.scss */
+.projects_for_phase li img {
+  border: 2px solid #FFF;
+  float: left;
+  margin-bottom: 10px;
+}
+
+/* line 140, ../../app/stylesheets/index.scss */
+li.project {
+  margin-right: 50px;
+}
+
+/* line 142, ../../app/stylesheets/index.scss */
+.browse {
+  background: url('../images/phase.png?1296005896') 0 -51px no-repeat;
+  height: 32px;
+  position: relative;
+  width: 15px;
+  z-index: 500;
+  float: left;
+  margin-top: 55px;
+  display: block;
+}
+
+/* line 153, ../../app/stylesheets/index.scss */
+.right.browse {
+  background: url('../images/phase.png?1296005896') 0 -83px no-repeat;
+  float: right;
+}
+
+/* line 154, ../../app/stylesheets/index.scss */
+.browse {
+  cursor: pointer;
+}
+
+/* line 156, ../../app/stylesheets/index.scss */
+.incomplete, .completed {
+  float: left;
+  position: relative;
+  width: 7px;
+  z-index: 200;
+}
+
+/* line 164, ../../app/stylesheets/index.scss */
+.incomplete {
+  background: url('../images/phase.png?1296005896') 0 -115px no-repeat;
+  height: 142px;
+  margin-left: -7px;
+  z-index: 199;
+}
+
+/* line 165, ../../app/stylesheets/index.scss */
+.completed {
+  background: url('../images/phase.png?1296005896') 0 -257px no-repeat;
+}
+
+/* line 166, ../../app/stylesheets/index.scss */
+.progress_label {
+  color: #ECE6E6;
+  float: left;
+  margin-left: 0px;
+  padding-left: 4px;
+  position: relative;
+  z-index: 300;
+  margin-left: 0px;
+  border-top: 1px solid #8A8787;
+}
+
+/* line 177, ../../app/stylesheets/index.scss */
+.arrow_hover {
+  background: url('../images/phase.png?1296005896') 0 -399px no-repeat;
+  width: 153px;
+  height: 101px;
+  display: block;
+  margin: -25px 0 0 -68px;
+  opacity: 0.0;
+  -moz-opacity: 0.0;
+  filter: alpha(opacity=0);
+}
+
+/* line 188, ../../app/stylesheets/index.scss */
+.project a {
+  color: #cdc5bf;
+  display: block;
+}
+
+/* line 189, ../../app/stylesheets/index.scss */
+.project a:hover {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+/* line 190, ../../app/stylesheets/index.scss */
+.project {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* line 191, ../../app/stylesheets/index.scss */
+.project .wrap {
+  float: left;
+  display: block;
+  color: #cdc5bf;
+}
+
+/* line 192, ../../app/stylesheets/index.scss */
+.project h3 {
+  font-size: 14px;
+  text-align: center;
+  color: #faf9f9;
+}
+
+/* line 193, ../../app/stylesheets/index.scss */
+.project .short_desc {
+  float: left;
+  width: 192px;
+}
+
+/* line 194, ../../app/stylesheets/index.scss */
+.link_to_site {
+  text-decoration: underline;
+}
+
+/* line 195, ../../app/stylesheets/index.scss */
+.nothing {
+  display: block;
+  float: left;
+  text-align: center;
+  margin-top: 70px;
+}
+
+/* line 197, ../../app/stylesheets/index.scss */
+#me_twitter {
+  z-index: 500;
+  background: url('../images/interact.png?1296005899') no-repeat;
+}
+
+/* line 199, ../../app/stylesheets/index.scss */
+#me_twitter,
+#me_twitter_bg_fade {
+  float: left;
+  margin: 350px 0 0 60px;
+  position: relative;
+  display: block;
+}
+
+/* line 201, ../../app/stylesheets/index.scss */
+#me_twitter,
+#me_twitter_bg_fade {
+  width: 155px;
+  height: 50px;
+}
+
+/* line 203, ../../app/stylesheets/index.scss */
+#me_twitter_bg_fade {
+  background: url('../images/interact.png?1296005899') 0 -55px no-repeat;
+  -moz-opacity: 0;
+  opacity: 0;
+  height: 90px;
+  left: -245px;
+  top: -30px;
+  width: 187px;
+}
+
+/* line 213, ../../app/stylesheets/index.scss */
+#dbd_twitter {
+  width: 62px;
+  height: 121px;
+  background: url('../images/interact.png?1296005899') 0 -145px no-repeat;
+  opacity: 0.6;
+  top: 100px;
+  float: right;
+  position: relative;
+}
+
+/* line 223, ../../app/stylesheets/index.scss */
+#octocat {
+  z-index: 500;
+  background: url('../images/interact.png?1296005899') 0 -266px no-repeat;
+  left: 500px;
+}
+
+/* line 224, ../../app/stylesheets/index.scss */
+#octocat, #octocat_bg_fade {
+  width: 211px;
+  height: 66px;
+  position: relative;
+  top: 320px;
+  margin: 0px auto;
+}
+
+/* line 232, ../../app/stylesheets/index.scss */
+#octocat_bg_fade {
+  background: url('../images/interact.png?1296005899') 0 -332px no-repeat;
+  height: 88px;
+  left: 482px;
+  top: 254px;
+  width: 247px;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+
+/* line 243, ../../app/stylesheets/index.scss */
+#signup {
+  margin-top: 50px;
+  width: 640px;
+  margin: 0px auto;
+}
+/* line 248, ../../app/stylesheets/index.scss */
+#signup h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+/* line 249, ../../app/stylesheets/index.scss */
+#signup h3 {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+/* line 251, ../../app/stylesheets/index.scss */
+#signup p {
+  color: #3c3c3c;
+  font-size: 12px;
+  line-height: 20px;
+  padding-left: 2px;
+}
+/* line 258, ../../app/stylesheets/index.scss */
+#signup h1 {
+  background: url('../images/signup.png?1296005897') no-repeat scroll top left;
+  width: 211px;
+  height: 35px;
+  margin: 0 auto;
+  padding: 3px 15px;
+  position: relative;
+  top: -25px;
+}
+/* line 268, ../../app/stylesheets/index.scss */
+#signup input.text_field, #signup input.text_area, #signup textarea {
+  border: none;
+}
+/* line 270, ../../app/stylesheets/index.scss */
+#signup input.text_field, #signup input.text_area, #signup textarea {
+  width: 276px;
+  height: 32px;
+  background: url('../images/signup.png?1296005897') 0 -35px no-repeat;
+  padding: 4px 4.5px 0px 4.5px;
+  color: #ddd;
+}
+/* line 278, ../../app/stylesheets/index.scss */
+#signup input.text_field:focus, #signup input.text_area:focus, #signup textarea:focus {
+  outline: none;
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 0 6px #9e9e9e;
+  -webkit-box-shadow: 0 0 6px #9e9e9e;
+  -moz-box-shadow: 0 0 8px #9e9e9e;
+  box-shadow: 0 0 8px #9e9e9e;
+  width: 266px;
+  color: #464646;
+  margin-left: 0px !important;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 297, ../../app/stylesheets/index.scss */
+#signup .basics,
+#signup input,
+#signup textarea {
+  float: left;
+  margin-bottom: 15px;
+}
+/* line 298, ../../app/stylesheets/index.scss */
+#signup fieldset {
+  width: 273px;
+}
+/* line 299, ../../app/stylesheets/index.scss */
+#signup div.basics {
+  width: 100%;
+}
+/* line 302, ../../app/stylesheets/index.scss */
+#signup input.text_field, #signup input.text_area, #signup textarea {
+  background: url('../images/signup.png?1296005897') 0 -71px no-repeat;
+  color: #DDDDDD;
+  height: 36px;
+  padding: 3px 4.5px 0;
+  width: 362px;
+}
+/* line 310, ../../app/stylesheets/index.scss */
+#signup input.text_field:focus, #signup input.text_area:focus, #signup textarea:focus {
+  outline: none;
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 0 5px #9e9e9e;
+  -webkit-box-shadow: 0 0 5px #9e9e9e;
+  -moz-box-shadow: 0 0 5px #9e9e9e;
+  width: 350px;
+  height: 28px;
+  color: #464646;
+  margin-left: 0px !important;
+}
+/* line 323, ../../app/stylesheets/index.scss */
+#signup .login_link {
+  display: block;
+  float: right;
+  line-height: 20px;
+  margin: 55px 0 0;
+  text-align: center;
+  width: 90px;
+}
+/* line 332, ../../app/stylesheets/index.scss */
+#signup #price_tag {
+  width: 97px;
+  height: 25px;
+  background: url('../images/signup.png?1296005897') 0 -107px no-repeat;
+  margin: -30px auto 0 0;
+  position: relative;
+}
+
+/* line 341, ../../app/stylesheets/index.scss */
+#basic_details_form {
+  float: left;
+}
+
+/* line 343, ../../app/stylesheets/index.scss */
+.you_get, .you_get li {
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 349, ../../app/stylesheets/index.scss */
+.you_get {
+  margin-bottom: 12px;
+  padding-left: 3px;
+}
+
+/* line 350, ../../app/stylesheets/index.scss */
+.you_get li {
+  padding-top: 12px;
+}
+
+/* line 351, ../../app/stylesheets/index.scss */
+.you_get .first {
+  padding-top: 0px;
+}
+
+/* line 353, ../../app/stylesheets/index.scss */
+.basics h3 {
+  margin-top: 12px;
+}
+
+/* line 356, ../../app/stylesheets/index.scss */
+ul.signin_providers {
+  margin: -2px auto 12px auto;
+  width: 150px;
+}
+/* line 360, ../../app/stylesheets/index.scss */
+ul.signin_providers li {
+  float: left;
+}
+/* line 362, ../../app/stylesheets/index.scss */
+ul.signin_providers li.twitter {
+  margin-right: 18px;
+}
+/* line 364, ../../app/stylesheets/index.scss */
+ul.signin_providers li.twitter a {
+  width: 33px;
+  height: 45px;
+  background: url('../images/signup.png?1296005897') 0 -132px no-repeat;
+}
+/* line 365, ../../app/stylesheets/index.scss */
+ul.signin_providers li.twitter a:hover {
+  background: url('../images/signup.png?1296005897') 0 -177px no-repeat;
+}
+/* line 366, ../../app/stylesheets/index.scss */
+ul.signin_providers li.twitter a:active {
+  background: url('../images/signup.png?1296005897') 0 -222px no-repeat;
+}
+
+/* line 370, ../../app/stylesheets/index.scss */
+#footer_wrap {
+  margin: 0 auto;
+  width: 990px;
+}
+
+/* line 371, ../../app/stylesheets/index.scss */
+#footer_line {
+  background: url('../images/footer-line.png?1282744760') repeat-x scroll 0 0 transparent;
+  height: 2px;
+  margin: 25px 0 10px;
+}
+
+/* line 377, ../../app/stylesheets/index.scss */
+#footer_copy,
+.copy {
+  font-size: 11px;
+}
+
+/* line 378, ../../app/stylesheets/index.scss */
+#footer_copy {
+  margin: 10px 0;
+}
+
+/* line 380, ../../app/stylesheets/index.scss */
+#footer_line,
+#footer_copy {
+  float: left;
+  width: 100%;
+}
+
+/* line 381, ../../app/stylesheets/index.scss */
+.copy {
+  float: left;
+  line-height: 14px;
+}
+
+/* line 382, ../../app/stylesheets/index.scss */
+.link_to_top {
+  float: right;
+}
+
+/* line 384, ../../app/stylesheets/index.scss */
+.projects_scroll_wrap {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 803px) {
+  /* line 389, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll_wrap {
+    width: 500px;
+  }
+  /* line 390, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll {
+    width: 440px;
+  }
+}
+
+@media screen and (min-width: 903px) {
+  /* line 397, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll_wrap {
+    width: 600px;
+  }
+  /* line 398, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll {
+    width: 540px;
+  }
+}
+
+@media screen and (min-width: 1003px) {
+  /* line 405, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll_wrap {
+    width: 700px;
+  }
+  /* line 406, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll {
+    width: 640px;
+  }
+}
+
+@media screen and (min-width: 1103px) {
+  /* line 413, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll_wrap {
+    width: 800px;
+  }
+  /* line 414, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll {
+    width: 740px;
+  }
+}
+
+@media screen and (min-width: 1264px) {
+  /* line 421, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll_wrap {
+    width: 960px;
+  }
+  /* line 422, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll {
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 1303px) {
+  /* line 429, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll_wrap {
+    width: 1000px;
+  }
+  /* line 430, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll {
+    width: 940px;
+  }
+}
+
+@media screen and (min-width: 1403px) {
+  /* line 437, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll_wrap {
+    width: 1100px;
+  }
+  /* line 438, ../../app/stylesheets/index.scss */
+  #phases .projects_scroll {
+    width: 1040px;
+  }
+}
+
+/* line 443, ../../app/stylesheets/index.scss */
+#destroyed {
+  margin-top: 25px;
+  font-size: 13px;
+  line-height: 19px;
+  color: #3c3c3c;
+}
+/* line 449, ../../app/stylesheets/index.scss */
+#destroyed h1 {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 1.5px;
+  color: #404142;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+}
+/* line 458, ../../app/stylesheets/index.scss */
+#destroyed ul {
+  padding: 0 0 0 20px;
+}
+/* line 459, ../../app/stylesheets/index.scss */
+#destroyed li {
+  margin-bottom: 12px;
+}
+/* line 460, ../../app/stylesheets/index.scss */
+#destroyed .inner {
+  width: 800px;
+}
+
+/* line 463, ../../app/stylesheets/index.scss */
+#destroyed_science {
+  width: 100%;
+  background: url('../images/science.png?1290197161') no-repeat scroll bottom right;
+}
