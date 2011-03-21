@@ -6,7 +6,6 @@ class DbdLaunch < Padrino::Application
   
   # Core
   register Padrino::Helpers   
-  register NavvyInitializer  
     
   # Resources. JS, CSS handling ext
   register CompassInitializer 
