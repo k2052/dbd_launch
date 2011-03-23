@@ -35,7 +35,7 @@
 #marker {
   background: sprite-image('phase/marker.png') no-repeat;
   height: 51px;
-  margin: -40px 0 0 525px;
+  margin: -40px 0 0 632px;
   position: relative;
   width: 94px;
   z-index: 100;
@@ -49,11 +49,11 @@
   width: 549px;
 }
 
-#bar.phase1 { background: image-url('phase_bars/phase1_bar.png') repeat-x; }
-#bar.phase2 { background: image-url('phase_bars/phase2_bar.png') repeat-x; }
-#bar.phase3 { background: image-url('phase_bars/phase3_bar.png') repeat-x; }
-#bar.phase4 { background: image-url('phase_bars/phase4_bar.png') repeat-x; }
-#bar.phase5 { background: image-url('phase_bars/phase5_bar.png') repeat-x; }
+#bar.phase1 { background: image-url('phase_bars/phase1_bar.png') repeat-x;  }
+#bar.phase2 { background: image-url('phase_bars/phase2_bar.png') repeat-x; width: 648px; }
+#bar.phase3 { background: image-url('phase_bars/phase3_bar.png') repeat-x; width: 746px; }
+#bar.phase4 { background: image-url('phase_bars/phase4_bar.png') repeat-x; width: 845px; }
+#bar.phase5 { background: image-url('phase_bars/phase5_bar.png') repeat-x; width: 943px; }
                                
 #phases
 {   
