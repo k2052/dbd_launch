@@ -4,5 +4,4 @@ DbdLaunch.controllers :main do
     @phases = Phase.all({:order => 'created_at asc'})        
     render "other/home"
   end     
- 
 end
