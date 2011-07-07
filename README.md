@@ -63,19 +63,9 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
   ```    
   I've hardcode coded some of the DB names (to share data across DBD sites) into my models make sure you change them.       
 
-4. Remove google analytics from app/views/other/home.haml
+4. Remove google analytics from app/views/other/home.slim
    Please don't leave in my tracking code.     
-  
-5. Set Production Asset urls.
-
-  Look for the following lines and make sure you set them you to your own urls        
-  
-  ```ruby
-  set :public_url, "http://assets0-launch.designbreakdown.com/css"       
-  set :css_url, 'http://assets0-launch.designbreakdown.com/css'
-  set :js_url, "http://assets0-launch.designbreakdown.com/js" # => http://site.com/js        
-  ```
-  
+   
 ## Brief Notes  
 
 Here are some WIP notes that might help you understand the app better.     
