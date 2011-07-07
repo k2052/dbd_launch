@@ -1,0 +1,42 @@
+.group
+  ==f.label :title
+  ==f.error_message_on :title
+  ==f.text_field :title, :class => :text_field
+  span.description Ex: a simple text
+  
+.group
+  ==f.label :full_desc
+  ==f.error_message_on :full_desc
+  ==f.text_field :full_desc, :class => :text_field
+  span.description Ex: a simple text
+  
+.group.phase
+  ==f.label :phase
+  ==f.select :phase_id, :collection => Phase.all, :fields => [:title, :id]
+  
+.group
+  ==f.label :progress
+  ==f.error_message_on :progress
+  ==f.text_field :progress, :class => :text_field
+  span.description Ex: a simple text
+
+.group
+  ==f.label :link_to_site
+  ==f.error_message_on :link_to_site
+  ==f.text_field :link_to_site, :class => :text_field
+  span.description Ex: a simple text
+
+.group
+  ==f.label :short_desc
+  ==f.error_message_on :short_desc
+  ==f.text_field :short_desc, :class => :text_field
+  span.description Ex: a simple text
+  
+.group
+  =image_tag(:image_url)
+  ==f.file_field :image
+  ==f.hidden_field :image_cache
+
+.group.navform.wat-cf
+  ==f.submit pat(:save), :class => :button
+  ==f.submit pat(:cancel), :onclick => "window.location='#{url(:projects, :index)}';return false", :class => :button
