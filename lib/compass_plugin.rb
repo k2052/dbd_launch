@@ -11,9 +11,9 @@ module CompassInitializer
       config.sass_dir = "app/stylesheets"
       config.project_type = :stand_alone
       config.http_path = "/"
-      config.css_dir = "public/css" 
+      config.css_dir = "public//stylesheets" 
       config.images_dir = "public/images" 
-      config.javascripts_dir = "public/js"
+      config.javascripts_dir = "public/javascripts"
       config.relative_assets  = true    
       config.output_style = :expanded     
       if Padrino.env == :production   

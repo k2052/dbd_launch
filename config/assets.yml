@@ -1,14 +1,16 @@
-js:
-  index:
-    - jquery.js  
-    - jquery.easing.js    
-    - jquery.mediaqueries.js 
-    - jquery.tools.min.js
-    - cufon.js 
-    - Muse.font.js
-    - hoverflow.js 
-    - jquery.scrollTo-1.4.2.js
-    - index.js   
+js: 
+  bundles: 
+    index:
+      - jquery.js  
+      - jquery.easing.js    
+      - jquery.mediaqueries.js 
+      - jquery.tools.min.js
+      - cufon.js 
+      - Muse.font.js
+      - hoverflow.js 
+      - jquery.scrollTo-1.4.2.js
+      - index.js    
 css: 
-  index:
-    - index.css
+  bundles: 
+    index:
+      - index.css   
