@@ -38,7 +38,7 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
     ENV['PASS_SALT_SECRET']         = "XXX"  
     ENV['TWITTER_CONSUMER_KEY']     = 'XXX'   
     ENV['TWITTER_CONSUMER_SECRET']  = 'XXX' 
-  ```ruby
+  ```
 
   ## VLAD/Deployment Enviroment Variables
   ```ruby
