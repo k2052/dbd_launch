@@ -19,10 +19,9 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
   Or 3. Use a heroku_env.rb file and place it in config/. heroku_ev.rb is loaded if it exists. 
   If you choose this method you should probably add the file to your gitignore so it is not checked in with subversion.
 
-  ### ENV Vars     
 
-  #### Heroku ENV Vars. Don't push this to heroku, obviously. 
-  `     
+  ## Heroku ENV Vars. Don't push this to heroku, obviously. 
+  ```ruby     
     # Postmark is used to send out alerts etc.
     ENV['POSTMARK_KEY']             = 'XXX'
   
@@ -39,10 +38,10 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
     ENV['PASS_SALT_SECRET']         = "XXX"  
     ENV['TWITTER_CONSUMER_KEY']     = 'XXX'   
     ENV['TWITTER_CONSUMER_SECRET']  = 'XXX' 
-  ` 
+  ```ruby
 
-  #### VLAD/Deployment Enviroment Variables
-  `
+  ## VLAD/Deployment Enviroment Variables
+  ```ruby
     ENV['deploy_user']      = "ubuntu"
     ENV['app_name']         = "app_name" 
     ENV['ssh_user']         = "ubuntu" 
@@ -54,13 +53,13 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
     ENV['deploy_via']       = "git"    
     ENV['num_thin_servers'] = '2' 
     ENV['thin_port']        = '3000'  
-  `  
+  ```  
 
 3. Check over the models for 
-  `
+  ```ruby
   when :development then self.set_database_name 'dbd_club_development'
   when :production  then self.set_database_name 'dbd_club_production'     
-  `    
+  ```    
   I've hardcode coded some of the DB names (to share data across DBD sites) into my models make sure you change them.       
 
 4. Remove google analytics from app/views/other/home.haml
@@ -69,11 +68,11 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
 5. Set Production Asset urls.
 
   Look for the following lines and make sure you set them you to your own urls
-  `
+  ```ruby
   set :public_url, "http://assets0-launch.designbreakdown.com/css"       
   set :css_url, 'http://assets0-launch.designbreakdown.com/css'
   set :js_url, "http://assets0-launch.designbreakdown.com/js" # => http://site.com/js        
-  `
+  ```
   
 ## Brief Notes  
 
