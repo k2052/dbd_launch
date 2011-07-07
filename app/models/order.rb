@@ -20,5 +20,4 @@ class Order
   def plan()   
     @plan = Plan.find(self[:plan_id])
   end   
-
 end

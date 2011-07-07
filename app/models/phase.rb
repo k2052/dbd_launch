@@ -21,5 +21,4 @@ class Phase
   def kramit
     self.desc = Kramdown::Document.new(self.desc_source).to_html
   end
-  
 end
