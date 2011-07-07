@@ -18,5 +18,4 @@ Admin.controllers :sessions do
     set_current_account(nil)
     redirect url(:sessions, :new)
   end 
-  
 end

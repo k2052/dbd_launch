@@ -44,5 +44,4 @@ Admin.controllers :phases do
     end
     redirect url(:phases, :index)
   end 
-  
 end

@@ -3,27 +3,16 @@ class Admin < Padrino::Application
   ##
   # Intializers
   #     
-  
-  # Core
-  register Padrino::Helpers  
+  register Padrino::Helpers   
+  register Padrino::Rendering   
+  register CompassInitializer
   register Sinatra::Flash
-   
-  # Authorizaition
   register Padrino::Admin::AccessControl 
-  register MongoStoreInitializer
-  
-  ##
-  # App Settings 
-  #   
   
   # Sessions   
   set :session_id, 'dbd_club'  
   set :login_page, "/admin/sessions/new"         
   
-  # Enables and Disables of padrino features
-  disable :store_location   
-  disable :flash    
- 
   ## 
   # Access Rules
   #
@@ -39,5 +28,4 @@ class Admin < Padrino::Application
     role.project_module :phases, "/phases"
     role.project_module :accounts, "/accounts"     
   end    
-  
 end

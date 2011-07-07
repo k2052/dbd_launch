@@ -44,5 +44,4 @@ Admin.controllers :projects do
     end
     redirect url(:projects, :index)
   end       
-  
 end
