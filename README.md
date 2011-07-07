@@ -17,7 +17,7 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
 2. After that you'll need to setup the following ENV vars.
   You can either 1. Use your .bashrc file, 2. Use heroku and add the vars using their tool.
   Or 3. Use a heroku_env.rb file and place it in config/. heroku_ev.rb is loaded if it exists. 
-  If you choose this method you should probably add the file to your gitignore so it is not checked in with subversion.
+  If you choose this method you should probably add the file to your gitignore so it is not checked in.
   
   ## Heroku ENV Vars. Don't push this to heroku, obviously.    
   
