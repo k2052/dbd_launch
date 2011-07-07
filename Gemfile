@@ -1,26 +1,27 @@
 source :rubygems
+source :gemcutter
 
 # Project requirements 
 gem 'rake'
-gem 'rack-flash'
 gem 'thin' # or mongrel  
 
 # Component requirements   
 gem 'magic' 
 gem 'rmagick'
-gem 'lemonade' 
 gem 'compass'
-gem 'haml'
+gem 'slim'
 gem 'mongo_mapper'
 gem 'bson_ext', :require => "mongo"       
-gem 'sinatra-minify'
 gem 'tzinfo'  
-gem 'carrierwave', "0.5.0.beta2"
-gem 'aws'       
+gem 'carrierwave'
+gem 'redcarpet'
 gem 'fog' 
-gem 'kramdown'  
 gem 'whenever'
-gem 'backup'
+gem 'backup'   
+gem 'asset_hat', :git => 'git://github.com/bookworm/asset_hat.git'
+gem 'sinatra-flash', :git => "git://github.com/bookworm/sinatra-flash.git"
+gem 'redis' 
+gem 'redis-store'
 
 # Test requirements
 gem 'shoulda', :group => "test"

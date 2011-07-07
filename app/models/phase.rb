@@ -1,4 +1,4 @@
-require 'kramdown' 
+require 'redcarpet' 
 class Phase
   include MongoMapper::Document
 
@@ -15,10 +15,10 @@ class Phase
   many :projects,  :foreign_key => "phase_id"  
   
   # Callbacks
-  before_save :kramit     
+  before_save :parse_markdown    
   
   # Markdown 
-  def kramit
-    self.desc = Kramdown::Document.new(self.desc_source).to_html
+  def parse_markdown
+    self.desc =  Redcarpet.new(self.desc_source).to_html
   end
 end
