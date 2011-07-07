@@ -18,41 +18,42 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
   You can either 1. Use your .bashrc file, 2. Use heroku and add the vars using their tool.
   Or 3. Use a heroku_env.rb file and place it in config/. heroku_ev.rb is loaded if it exists. 
   If you choose this method you should probably add the file to your gitignore so it is not checked in with subversion.
-
-
-  ## Heroku ENV Vars. Don't push this to heroku, obviously. 
+  
+  ## Heroku ENV Vars. Don't push this to heroku, obviously.    
+  
   ```ruby     
-    # Postmark is used to send out alerts etc.
-    ENV['POSTMARK_KEY']             = 'XXX'
-  
-    # S3 is used for media uploads
-    ENV['S3_ACCESS_KEY']            = 'XXX'
-    ENV['S3_SECRET_ACCESS_KEY']     = 'XXX'   
-      
-    # S3 Bucket where media is stored   
-    # Images/videos etc will be stored in a subfolder of the bucket.
-    # e.g bucketName/images bucketName/videos 
-    ENV['S3_BUCKET']                = 'Bucket To Store Media In'
-  
-    # Used as an extra salt to encrypt passwords. Refer to app/model/account.rb
-    ENV['PASS_SALT_SECRET']         = "XXX"  
-    ENV['TWITTER_CONSUMER_KEY']     = 'XXX'   
-    ENV['TWITTER_CONSUMER_SECRET']  = 'XXX' 
+  # Postmark is used to send out alerts etc.
+  ENV['POSTMARK_KEY']             = 'XXX'
+
+  # S3 is used for media uploads
+  ENV['S3_ACCESS_KEY']            = 'XXX'
+  ENV['S3_SECRET_ACCESS_KEY']     = 'XXX'   
+    
+  # S3 Bucket where media is stored   
+  # Images/videos etc will be stored in a subfolder of the bucket.
+  # e.g bucketName/images bucketName/videos 
+  ENV['S3_BUCKET']                = 'Bucket To Store Media In'
+
+  # Used as an extra salt to encrypt passwords. Refer to app/model/account.rb
+  ENV['PASS_SALT_SECRET']         = "XXX"  
+  ENV['TWITTER_CONSUMER_KEY']     = 'XXX'   
+  ENV['TWITTER_CONSUMER_SECRET']  = 'XXX' 
   ```
 
-  ## VLAD/Deployment Enviroment Variables
+  ## VLAD/Deployment Enviroment Variables    
+  
   ```ruby
-    ENV['deploy_user']      = "ubuntu"
-    ENV['app_name']         = "app_name" 
-    ENV['ssh_user']         = "ubuntu" 
-    ENV['domain']           = "xxx.amazonaws.com" 
-    ENV['app_domain_name']  = "domain.domain.com"
-    ENV['repository']       = "ssh://#{ENV['domain']}/home/#{ENV['deploy_user']}/repos/#{ENV['app_name']}.git"
-    ENV['deploy_to']        = "/home/#{ENV['deploy_user']}/#{ENV['app_domain_name']}/#{ENV['app_name']}"     
-    ENV['nginx_site_path']  = "/etc/nginx/sites-available/#{ENV['app_domain_name']}"
-    ENV['deploy_via']       = "git"    
-    ENV['num_thin_servers'] = '2' 
-    ENV['thin_port']        = '3000'  
+  ENV['deploy_user']      = "ubuntu"
+  ENV['app_name']         = "app_name" 
+  ENV['ssh_user']         = "ubuntu" 
+  ENV['domain']           = "xxx.amazonaws.com" 
+  ENV['app_domain_name']  = "domain.domain.com"
+  ENV['repository']       = "ssh://#{ENV['domain']}/home/#{ENV['deploy_user']}/repos/#{ENV['app_name']}.git"
+  ENV['deploy_to']        = "/home/#{ENV['deploy_user']}/#{ENV['app_domain_name']}/#{ENV['app_name']}"     
+  ENV['nginx_site_path']  = "/etc/nginx/sites-available/#{ENV['app_domain_name']}"
+  ENV['deploy_via']       = "git"    
+  ENV['num_thin_servers'] = '2' 
+  ENV['thin_port']        = '3000'    
   ```  
 
 3. Check over the models for 
@@ -63,11 +64,12 @@ Its still messy and sparsely documented but dig in and if all goes well you'll f
   I've hardcode coded some of the DB names (to share data across DBD sites) into my models make sure you change them.       
 
 4. Remove google analytics from app/views/other/home.haml
-  Please don't leave in my tracking code.     
+   Please don't leave in my tracking code.     
   
 5. Set Production Asset urls.
 
-  Look for the following lines and make sure you set them you to your own urls
+  Look for the following lines and make sure you set them you to your own urls        
+  
   ```ruby
   set :public_url, "http://assets0-launch.designbreakdown.com/css"       
   set :css_url, 'http://assets0-launch.designbreakdown.com/css'
