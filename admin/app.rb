@@ -1,3 +1,5 @@
+require 'sinatra/flash'
+require 'redis-store'
 class Admin < Padrino::Application             
   
   ##
@@ -7,7 +9,8 @@ class Admin < Padrino::Application
   register Padrino::Rendering   
   register CompassInitializer
   register Sinatra::Flash
-  register Padrino::Admin::AccessControl 
+  register Padrino::Admin::AccessControl     
+  Padrino.use Rack::Session::Redis  
   
   # Sessions   
   set :session_id, 'dbd_club'  

@@ -25,17 +25,15 @@ class Account
   timestamps!
 
   # Validations
-  if validations.empty?      
-    validates_presence_of     :email 
-    validates_presence_of     :password,                   :if => :password_required
-    validates_presence_of     :password_confirmation,      :if => :password_required
-    validates_length_of       :password, :within => 4..40, :if => :password_required
-    validates_confirmation_of :password,                   :if => :password_required
-    validates_length_of       :email,    :within => 3..100
-    validates_uniqueness_of   :email,    :case_sensitive => false
-    validates_format_of       :email,    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i             
-  end       
-                
+  validates_presence_of     :email 
+  validates_presence_of     :password,                   :if => :password_required
+  validates_presence_of     :password_confirmation,      :if => :password_required
+  validates_length_of       :password, :within => 4..40, :if => :password_required
+  validates_confirmation_of :password,                   :if => :password_required
+  validates_length_of       :email,    :within => 3..100
+  validates_uniqueness_of   :email,    :case_sensitive => false
+  validates_format_of       :email,    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i               
+  
   # Callbacks
   before_save :generate_password     
   
@@ -78,19 +76,7 @@ class Account
     else 
       return false
     end
-  end 
-   
-  # Checks if a product has been pruchased 
-  # We maintain an array purchased document IDs in the account model.
-  # Which essentially allows a user to "purchase" any document.
-  def has_purchased?(purchasedID) 
-    if self.purchases.length > 0 
-      purchasedID = BSON::ObjectId.from_string(purchasedID) 
-      return self.purchases.include?(purchasedID)      
-    else 
-      return false
-    end
-  end     
+  end   
    
   # Returns the name
   def name()  
@@ -98,7 +84,6 @@ class Account
   end
 
   private    
-  
     def generate_password
       return if password.blank?
       self.salt             = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{email}--") if new_record?
@@ -109,5 +94,4 @@ class Account
     def password_required
       crypted_password.blank? || !password.blank?
     end
-    
 end
