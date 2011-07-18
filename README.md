@@ -1,3 +1,7 @@
+## Dead
+This project is dead wont be making updates.
+Checkout my other padrino projects if your looking for an example APP.          
+
 ## Intro
 
 This is the source code for launch.designbreakdown.com.   
@@ -100,12 +104,7 @@ To configure the backup gem look to backup.rb and schedule.rb
 Copyright (C) 2009-2010 Ken Erickson AKA Bookworm. (http://bookwormproductions.net)
 
 ### Media License.    
- 
-You do not receive any rights to use the fonts, images or videos. 
-These are for example purposes only and you must replace them.    
-You may not use any of the fonts, images, or videos on any site without permission. 
-
-Also please be reasonable with your css usage i.e don't just swap-out graphics.
+Media now under WTFPL. Do what you like with he design. I'll release the PSD sources at some point.
 
 ### Source License
 All Source Code Is Licensed under WTFPL.

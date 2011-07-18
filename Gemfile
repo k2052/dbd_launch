@@ -16,8 +16,6 @@ gem 'tzinfo'
 gem 'carrierwave'
 gem 'redcarpet'
 gem 'fog' 
-gem 'whenever'
-gem 'backup'   
 gem 'asset_hat', :git => 'git://github.com/bookworm/asset_hat.git'
 gem 'sinatra-flash', :git => "git://github.com/bookworm/sinatra-flash.git"
 gem 'redis' 
